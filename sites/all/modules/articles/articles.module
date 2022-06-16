@@ -1,4 +1,5 @@
 <?php
+require_once ('articles.theme.inc'); 
 function articles_menu() {
     $items = array();
      $items['articles'] = array(
@@ -8,4 +9,22 @@ function articles_menu() {
         'access callback'   =>  true,  //any user can access this page
        );
      return $items;
+}
+
+function articles_list() {
+    // select all rows from books table
+    
+    //$query = db_select('movies1', 'tr')->fields('tr');
+
+
+
+// execute above query to get the results from database table.
+//$result = $query->execute();
+
+//send data to custom theme template
+//theme books_list created under sites\all\themes\custom\fiction\templates\books\books-list.tpl.php
+
+//$output = theme('articles_list', array('data'=> $result)); 
+$output = theme('articles_list', array('data'=> array('books_title'=>'algorithm1'))); 
+return $output;
 }
