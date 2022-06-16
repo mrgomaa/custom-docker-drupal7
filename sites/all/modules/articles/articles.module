@@ -1,0 +1,11 @@
+<?php
+function articles_menu() {
+    $items = array();
+     $items['articles'] = array(
+        'title'             =>  'Articles View',  //page title
+        'description'       =>  'Articles Information',  //description show when mouse hover on link
+        'page callback'     =>  'articles_list',  //callback function which is invoked when menu item is called.
+        'access callback'   =>  true,  //any user can access this page
+       );
+     return $items;
+}
